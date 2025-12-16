@@ -3,29 +3,29 @@
 \begin{frame}{Mathematical modeling}
     \begin{block}{Thermo-fluid transport equations}
         
-        % 1. Mass Conservation
-        % Added parentheses around (u) to match your image
+
+
+% 1. Mass Conservation
+    % Parentheses (u) included
+    \[
+        \nabla \cdot (\mathbf{u}) = 0
+    \]
+    % 2. Momentum Conservation
+    \[
+        \rho \left[ \frac{\partial \mathbf{u}}{\partial t} + \nabla \cdot (\mathbf{uu}) \right] = \nabla \cdot (\mu \nabla \mathbf{u}) - \nabla p + \rho \beta (T - T_0) \mathbf{g} - \mu \frac{180}{\lambda^2} \frac{f_s^2}{(1 - f_s)^3} \mathbf{u}
+    \]
+    % 3. Energy Conservation
+    \[
+        \rho c_p \left[ \frac{\partial T}{\partial t} + \nabla \cdot (\mathbf{u}T) \right] = \nabla \cdot (k \nabla T) + \rho L_f \frac{\partial f_s}{\partial t} + Q
+    \]
+
+        \end{block}
+
+        \begin{block}{Gaussian heat source}
         \[
-            \nabla \cdot (\mathbf{u}) = 0
+            Q(x, y, z) = \frac{2\eta P}{r_{xy}^2 d \pi^{3/2}} \exp \left( - \left( \frac{2(x-x_0)^2}{r_{xy}^2} + \frac{2(y-y_0)^2}{r_{xy}^2} + \frac{2(z-z_0)^2}{d^2} \right) \right)
         \]
-
-        \vspace{0.2cm}
-
-        % 2. Momentum Conservation
-        % Added the missing '+' inside the square brackets
-        % Fixed the denominator to (1-f_s)^3
-        \[
-            \rho \left[ \frac{\partial \mathbf{u}}{\partial t} + \nabla \cdot (\mathbf{uu}) \right] = \nabla \cdot (\mu \nabla \mathbf{u}) - \nabla p + \rho \beta (T - T_0) \mathbf{g} - \mu \frac{180}{\lambda^2} \frac{f_s^2}{(1 - f_s)^3} \mathbf{u}
-        \]
-
-        \vspace{0.2cm}
-
-        % 3. Energy Conservation
-        % Added the missing '+' signs inside brackets and before Q
-        \[
-            \rho c_p \left[ \frac{\partial T}{\partial t} + \nabla \cdot (\mathbf{u}T) \right] = \nabla \cdot (k \nabla T) + \rho L_f \frac{\partial f_s}{\partial t} + Q
-        \]
-
     \end{block}
+
 \end{frame}
 
