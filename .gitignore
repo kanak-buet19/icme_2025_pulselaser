@@ -17,7 +17,7 @@
 build/
 
 # PDF output (uncomment to ignore)
- main.pdf
+main.pdf
 
 # OS files
 .DS_Store
