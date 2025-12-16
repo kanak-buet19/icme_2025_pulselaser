@@ -1,0 +1,87 @@
+\section{Model Validation}
+\begin{frame}{Model Validation}
+    The numerical model was validated using experimental data from the \textit{NIST Additive Manufacturing Benchmark 2018 Challenge} across 3 distinct welding conditions:
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[t]
+        \begin{column}{0.48\textwidth}
+            \begin{table}[h]
+                \centering
+                \begin{tabular}{ccc}
+                    \toprule
+                    \textbf{Case} & \textbf{Power} & \textbf{Speed} \\
+                    & \textbf{(W)} & \textbf{(mm/s)} \\
+                    \midrule
+                    A & 137.9 & 400 \\
+                    B & 179.2 & 800 \\
+                    C & 179.2 & 1200 \\
+                    \bottomrule
+                \end{tabular}
+                \caption{Welding Process Parameters}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Validation Metrics}
+                \begin{itemize}
+                    \item Melt pool geometry
+                    \item Cooling rates
+                    \item Microstructure predictions
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+    
+    \vfill
+    \footnotesize
+    \textit{* NIST AM Bench is an international benchmark series for validating computational models against standardized additive manufacturing experiments.}
+\end{frame}
+
+
+\begin{frame}{Thermo-Fluid Validation}
+
+     The thermo-fluid model was validated by comparing predicted melt pool dimensions (depth and width) against experimental measurements through qualitative and quantitative analysis.
+
+    
+    \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.48\textwidth}
+            \centering
+            \raisebox{0.25cm}{\includegraphics[width=\textwidth]{figures/meltpool_validation_caseB.png}}
+            \caption{Qualitative comparison of melt pool morphology for case B}
+            \label{fig:meltpool_b}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.48\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/meltpool_validation_bar.png}
+            \caption{Quantitative validation of melt pool dimensions for all 3 cases}
+            \label{fig:meltpool_all}
+        \end{subfigure}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Microstructure Validation}
+
+    
+    \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.38\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/ebsd_exp_sim.jpg}
+            \caption{Qualitative comparison of grain structure (Case B)}
+            \label{fig:ebsd_b}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.58\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/cooling_rate_validation.jpeg}
+            \caption{Quantitative validation of grain dimensions}
+            \label{fig:grain_all}
+        \end{subfigure}
+    \end{figure}
+\end{frame}
+

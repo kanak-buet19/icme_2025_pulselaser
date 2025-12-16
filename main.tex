@@ -1,0 +1,55 @@
+\documentclass[aspectratio=43,10pt]{beamer}
+\usetheme{Berlin}
+\usecolortheme{rose}
+\usepackage{tikz}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{tcolorbox}
+\setbeamertemplate{navigation symbols}{}
+\usefonttheme{serif}
+
+
+
+
+\title[Microstructural Evolution of IN625 During Pulsed Laser Welding]{
+    Numerical Study of Microstructural Evolution \\ 
+    of IN625 During Pulsed Laser Welding \\[0.3cm]
+    \small Paper ID: ICAM-2026-1234
+}
+\author[Kanak \& Badhon]{
+    Rakibul Islam Kanak\inst{1} \and Badhon Kumar\inst{1}
+}
+\institute[ICME 2025]{
+    \inst{1}Department of Mechanical Engineering \\
+    Bangladesh University of Engineering and Technology
+}
+\date{%
+    \small 15th International Conference on Mechanical Engineering (ICME) 2025\\
+    December 17-18, 2025 \\
+    BUET, Dhaka, Bangladesh
+}
+\hypersetup{
+    pdfauthor={Rakibul Islam Kanak, Badhon Kumar},
+    pdftitle={Numerical Study of Microstructural Evolution of IN625 During Pulsed Laser Welding}
+}
+\begin{document}
+\begin{frame}
+    \titlepage
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=south east,xshift=-0.5cm,yshift=0.6cm] at (current page.south east) {
+            \includegraphics[height=1cm]{figures/buet_logo.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+\include{sections/intro}
+\include{sections/methods}
+\include{sections/validation}
+\include{sections/result}
+\include{sections/conclusion}
+\end{document}

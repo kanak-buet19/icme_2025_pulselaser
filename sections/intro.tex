@@ -1,0 +1,79 @@
+\section{Introduction}
+\usetikzlibrary{positioning, shapes.geometric, calc}
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta}
+\begin{frame}{Introduction}
+
+    \begin{block}{Laser Welding}
+        One of the most preferred welding techniques due to excellent precision and high energy density -- produces excellent quality joints.
+    \end{block}
+
+    \vspace{0.5cm}
+
+    \begin{center}
+    \begin{tikzpicture}[
+        scale=0.8, transform shape, 
+        node distance=1cm and 1.5cm, 
+        boxstyle/.style={
+            rectangle, 
+            draw=none, 
+            fill=structure.fg!90!black, 
+            text=white, 
+            align=center, 
+            rounded corners=3pt, 
+            minimum height=1.2cm, 
+            font=\small
+        },
+        line/.style={
+            draw, 
+            ->, 
+            >=stealth,  
+            thick, 
+            color=structure.fg!90!black
+        }
+    ]
+
+        \node[boxstyle, minimum width=3cm, minimum height=1.5cm] (root) {Laser Welding};
+
+        \node[boxstyle, right=1.5cm of root, yshift=1.0cm, minimum width=3.5cm] (cw) {Continuous Wave};
+        \node[boxstyle, right=1.5cm of root, yshift=-1.0cm, minimum width=3.5cm] (pw) {Pulsed Wave};
+
+        \node[boxstyle, right=1cm of cw, text width=4.5cm] (cw_desc) {Laser interacts \\ with metal \\ continuously};
+        \node[boxstyle, right=1cm of pw, text width=4.5cm] (pw_desc) {Laser applied in a \\ short intermittent \\ bursts};
+
+        \draw[line] (root.east) -- (cw.west);
+        \draw[line] (root.east) -- (pw.west);
+        \draw[line] (cw.east) -- (cw_desc.west);
+        \draw[line] (pw.east) -- (pw_desc.west);
+
+    \end{tikzpicture}
+    \end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Our work}
+    \begin{block}{Why Pulsed Laser welding}
+        It enables finer control of heat input and melt-pool dynamics – thus controlling the cooling rate and grain growth.
+    \end{block}
+
+    \begin{block}{Why Nickel Based Alloy}
+        They have excellent properties like low density yet high toughness, bio-compatibility, and excellent resistance to creep, corrosion, and high temperatures
+    \end{block}
+
+    % A stand-out box using tcolorbox
+    % colback = background color (light teal)
+    % colframe = border color (dark teal)
+    \begin{tcolorbox}[
+        colback=blue!10!white, 
+        colframe=blue!80!black, 
+        title=\textbf{Our Work}, 
+        fonttitle=\large,
+        arc=2mm,             
+        boxrule=0.5mm,       
+        left=6pt, right=6pt, top=6pt, bottom=6pt
+    ]
+        This work utilizes a \textbf{Cellular Automata (CA)} based microstructural simulation to establish \textit{predictive process-structure relationships}, directly informing the optimization of weld quality in the alloy \textbf{Inconel 625}.
+    \end{tcolorbox}
+    
+\end{frame}
