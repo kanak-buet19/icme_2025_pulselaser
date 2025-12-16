@@ -1,5 +1,4 @@
-# LaTeX build artifacts
-build/
+# LaTeX build artifacts (anywhere in repo)
 *.aux
 *.fdb_latexmk
 *.fls
@@ -14,8 +13,11 @@ build/
 *.bcf
 *.run.xml
 
-# PDF output (keep main.pdf tracked, ignore others)
-# main.pdf
+# Build directory (if it exists)
+build/
+
+# PDF output (uncomment to ignore)
+ main.pdf
 
 # OS files
 .DS_Store
