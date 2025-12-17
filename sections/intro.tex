@@ -15,9 +15,10 @@
         node distance=1cm and 1.5cm, 
         boxstyle/.style={
             rectangle, 
-            draw=none, 
-            fill=structure.fg!90!black, 
-            text=white, 
+            draw=structure.fg!90!black,
+            line width=1pt,
+            fill=white, 
+            text=black, 
             align=center, 
             rounded corners=3pt, 
             minimum height=1.2cm, 
@@ -38,7 +39,7 @@
         \node[boxstyle, right=1.5cm of root, yshift=-1.0cm, minimum width=3.5cm] (pw) {Pulsed Wave};
 
         \node[boxstyle, right=1cm of cw, text width=4.5cm] (cw_desc) {Laser interacts \\ with metal \\ continuously};
-        \node[boxstyle, right=1cm of pw, text width=4.5cm] (pw_desc) {Laser applied in a \\ short intermittent \\ bursts};
+        \node[boxstyle, right=1cm of pw, text width=4.5cm] (pw_desc) {Laser applied in a \\ short intermittent \\ bursts \cite{Chludzinski2021}};
 
         \draw[line] (root.east) -- (cw.west);
         \draw[line] (root.east) -- (pw.west);
@@ -48,30 +49,51 @@
     \end{tikzpicture}
     \end{center}
 
+
+
 \end{frame}
 
 
 
-\begin{frame}{Our work}
-    \begin{block}{Why Pulsed Laser welding}
-        It enables finer control of heat input and melt-pool dynamics – thus controlling the cooling rate and grain growth.
-    \end{block}
-
-    \begin{block}{Why Nickel Based Alloy}
-        They have excellent properties like low density yet high toughness, bio-compatibility, and excellent resistance to creep, corrosion, and high temperatures
-    \end{block}
-
-    \vspace{-0.2cm}
-    \begin{tcolorbox}[
-        colback=blue!10!white, 
-        colframe=blue!80!black, 
-        title=\textbf{Our Work}, 
-        fonttitle=\large,
-        arc=2mm,             
-        boxrule=0.5mm,       
-        left=6pt, right=6pt, top=6pt, bottom=6pt
-    ]
-        This work utilizes a \textbf{Cellular Automata (CA)} based microstructural simulation to establish \textit{predictive process-structure relationships}, directly informing the optimization of weld quality in the alloy \textbf{Inconel 625}.
-    \end{tcolorbox}
-    
+\begin{frame}{Our Work}
+    \begin{columns}[t]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Why Pulsed Laser Welding?}
+                \small
+                \begin{itemize}
+                    \item Enhanced control of heat input and melt pool dynamics \cite{Guo2021}
+                    \item Precise control of cooling rate and grain structure \cite{Peyre2025}
+                \end{itemize}
+            \end{block}
+            
+            \vspace{0.2cm}
+            
+            \begin{block}{Research Gap}
+                \small
+                \begin{itemize}
+                    \item Experimental parametric studies are cost-prohibitive and time-intensive
+                \end{itemize}
+            \end{block}
+        \end{column}
+        
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Why Nickel-Based Superalloys?}
+                \small
+                \begin{itemize}
+                    \item Superior strength-to-weight ratio
+                    \item Exceptional resistance to creep, corrosion, and high temperatures \cite{Thellaputta2017}
+                \end{itemize}
+            \end{block}
+            
+            \vspace{0.2cm}
+            
+            \begin{block}{This Work}
+                \small
+                \begin{itemize}
+                    \item Coupled CFD-CA framework for pulsed laser welding of IN625
+                    \item Established predictive process-structure relationships
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
 \end{frame}

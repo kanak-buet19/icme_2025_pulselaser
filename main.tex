@@ -1,22 +1,28 @@
-\documentclass[aspectratio=43,10pt]{beamer}
+\documentclass[aspectratio=169,9pt]{beamer}
 \usetheme{Berlin}
+\setbeamertemplate{footline}{}  % Remove footer
 \usecolortheme{rose}
 \usepackage{tikz}
-%\usepackage{newtxtext,newtxmath}
+\usepackage{newtxtext,newtxmath}  % Times font
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+%\usepackage{lmodern}  % Remove this - conflicts with Times
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{tcolorbox}
 \setbeamertemplate{navigation symbols}{}
 \usefonttheme{serif}
-\usepackage{amsmath}              % Advanced math commands
+\usepackage{amsmath}   % Advanced math commands
 
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+% Add this line to set bibliography font size
+\renewcommand*{\bibfont}{\tiny}
 
 \title[Microstructural Evolution of IN625 During Pulsed Laser Welding]{
     Numerical Study of Microstructural Evolution \\ 
     of IN625 During Pulsed Laser Welding \\[0.3cm]
-    \small Paper ID: ICAM-2026-1234
+    \small Paper ID: 137
 }
 \author[Kanak \& Badhon]{
     Rakibul Islam Kanak\inst{1} \and Badhon Kumar\inst{1}
@@ -51,4 +57,10 @@
 \include{sections/validation}
 \include{sections/result}
 \include{sections/conclusion}
+
+\begin{frame}[allowframebreaks]{References}
+    \setbeamertemplate{frametitle continuation}{}
+    \printbibliography[heading=none]
+\end{frame}
+
 \end{document}
